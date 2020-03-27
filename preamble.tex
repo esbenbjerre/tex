@@ -1,0 +1,66 @@
+\documentclass[a4paper,english]{article}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsfonts,amsmath,amssymb,bm,mathtools,physics}
+\usepackage{amsthm} % The package amsthm provides the environment proof for proofs
+\usepackage{array,tabularx,booktabs,authblk,url}
+\usepackage{listings}
+\usepackage{algorithm,algpseudocode}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,arrows,shapes,shapes.geometric} % For automata
+\tikzstyle{accepting}=[double distance=1.5pt, outer sep=1pt+\pgflinewidth] % Adjust accepting state double lines
+\usepackage{sistyle}
+\usepackage{url}
+\usepackage{logicproof}
+\usepackage{enumerate}
+\usepackage{csquotes,xpatch} % Recommended for biblatex
+
+% Removes dot (.) from line numbers in logicproof
+\makeatletter
+\renewcommand{\lp@start@proof@line}{
+  \stepcounter{lp@line}
+  \arabic{lp@line}
+  &
+  \lp@continue@proof@line
+}
+\makeatother
+
+% These are some shortscuts to typeset various rules in logicproof
+% and
+\newcommand{\andi}[1]{$\wedge$i $#1$}
+\newcommand{\andel}[1]{$\wedge$e$_1$ $#1$}
+\newcommand{\ander}[1]{$\wedge$e$_2$ $#1$}
+% or
+\newcommand{\oril}[1]{$\vee$i$_1$ $#1$}
+\newcommand{\orir}[1]{$\vee$i$_2$ $#1$}
+\newcommand{\ore}[1]{$\vee$e $#1$}
+% implication
+\newcommand{\impi}[1]{$\rightarrow$i $#1$}
+\newcommand{\impe}[1]{$\rightarrow$e $#1$}
+% negation
+\newcommand{\negi}[1]{$\neg$i $#1$}
+\newcommand{\nege}[1]{$\neg$e $#1$}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{
+\hskip -\arraycolsep
+\let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
+
+\newcommand{\e}{\mathrm{e}} % Euler's number
+
+% Number sets
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+\newcommand{\kleene}{\displaystyle{*}}
